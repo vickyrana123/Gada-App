@@ -1,0 +1,29 @@
+.container{
+    padding: 60px;
+
+}
+
+.card-title{
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.l1{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+
+}
+
+.form-control{
+    padding: 20px;
+}
+
+.btn{
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
