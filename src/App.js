@@ -7,12 +7,14 @@ import Login from './Mycomponents/Login';
 import Register from './Mycomponents/Register';
 import Cart from './Mycomponents/Cart';
 import Seller from './Mycomponents/Seller';
+import Buynow from './Mycomponents/Buynow'; // Ensure this component exists
+
 
 function App() {
   const location = useLocation();
 
   // List of routes where the Main section should not be displayed
-  const hideMainRoutes = ['/login', '/register', '/cart', '/seller'];
+  const hideMainRoutes = ['/login', '/register', '/cart', '/seller', '/buy-now'];
 
   return (
     <>
@@ -22,6 +24,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/seller" element={<Seller />} />
+        <Route path="/buy-now/:productId" element={<Buynow />} />
+        <Route path="/" element={<Main />} />
       </Routes>
       {!hideMainRoutes.includes(location.pathname) && <Main />}
       <Footer />
