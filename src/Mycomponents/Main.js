@@ -146,6 +146,7 @@ export default function Main() {
   };
 
   return (
+    
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
       {cardContent.map((card, index) => (
         <div className="col" key={index}>
