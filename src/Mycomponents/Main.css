@@ -1,0 +1,32 @@
+/* Container to hide overflow */
+.slider-container {
+    overflow: hidden;
+    width: 100vw; /* Full width of the viewport */
+    height: 400px; /* Height of the image slider */
+    position: relative;
+  }
+  
+  /* Image slider to hold and animate images */
+  .image-slider {
+    display: flex;
+    position: absolute;
+    animation: moveImages 30s linear infinite; /* Smooth infinite movement */
+  }
+  
+  /* Individual images */
+  .movingImage {
+    width: auto;
+    height: 110px;
+    margin-right: 60px;
+  }
+  
+  /* Keyframes to animate the images in a loop */
+  @keyframes moveImages {
+    0% {
+      transform: translateX(100vw); /* Start from right outside the viewport */
+    }
+    100% {
+      transform: translateX(-100%); /* Move to the left beyond the last image */
+    }
+  }
+  

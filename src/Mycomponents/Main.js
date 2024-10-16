@@ -1,6 +1,20 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import downloadImage from './rough.png'; // Adjust path according to the actual file location
+import downloadImage from './rough.png'; 
+import Image from './ecom.png'; 
+import './Main.css';
+import client from './you.png'; 
+import client1 from './insta.png'; 
+import client2 from './face.png'; 
+import client3 from './info.png'; 
+import client4 from './google.png'; 
+import client5 from './tata.png'; 
+import client6 from './Swiggy.png'; 
+import client7 from './pum.png'; 
+import client8 from './nik.png'; 
+
+
+// Adjust path according to the actual file location
 
 export default function Main() {
   const navigate = useNavigate();
@@ -152,16 +166,52 @@ export default function Main() {
       <img 
         src={downloadImage} 
         alt="Description of the image" 
-        style={{ width: '500', height: '500', marginRight: '100px', marginBottom: 100, marginTop: 100 }} // Image on the left
+        style={{height: 800,marginRight: '100px', marginBottom: 50, marginTop: 100, marginLeft: 100 }} // Image on the left
       />
       <div style={{ flex: 1}}> {/* This allows the text div to take up remaining space */}
-        <h1 style={{fontSize: 100, color: 'darkviolet'}}>Shop Smart, Live Well!</h1>
+        <h1 style={{fontSize: 80, color: 'darkviolet'}}>Shop Smart, Live Well!</h1>
         <p style={{fontSize: 50}}>Discover a world of unbeatable deals and quality products tailored for your lifestyle.</p>
       </div>
     </div>
+    <div style={{ display: 'flex', alignItems: 'center', padding: '20px' }}>
+    <div style={{ flex: 1}}> {/* This allows the text div to take up remaining space */}
+        <h1 style={{fontSize: 70, color: 'darkviolet', marginLeft: 80}}>Quality Products at Unbeatable Prices!</h1>
+        <p style={{fontSize: 50, marginLeft: 80}}>Discover a curated selection of high-quality products that cater to your needs at prices you won’t find anywhere else</p>
+      </div>
+      <img 
+        src={Image} 
+        alt="Description of the image" 
+        style={{height: 600,marginRight: '100px', marginBottom: 100, marginTop: 100, marginLeft: 80 }} // Image on the left
+      />
+    </div>
+    <div className="slider-container" style={{marginTop: 200, marginBottom: 200}}>
+      <h1 style={{fontSize: 70, marginBottom: 180, marginLeft: 900, color: 'darkviolet'}}>Our Partners</h1>
+        <div className="image-slider">
+          {/* Repeat these images to create the continuous loop effect */}
+          <img className="movingImage" src={client4} alt="img1" />
+          <img className="movingImage" src={client} alt="img2" />
+          <img className="movingImage" src={client2} alt="img3" />
+          <img className="movingImage" src={client1} alt="img4" />
+          <img className="movingImage" src={client3} alt="img5" />
+          <img className="movingImage" src={client6} alt="img4" />
+          <img className="movingImage" src={client5} alt="img5" />
+          <img className="movingImage" src={client7} alt="img4" />
+          <img className="movingImage" src={client8} alt="img5" />
+          {/* Duplicate the images for smooth loop */}
+          <img className="movingImage" src={client4} alt="img1" />
+          <img className="movingImage" src={client} alt="img2" />
+          <img className="movingImage" src={client2} alt="img3" />
+          <img className="movingImage" src={client1} alt="img4" />
+          <img className="movingImage" src={client3} alt="img5" />
+          <img className="movingImage" src={client6} alt="img4" />
+          <img className="movingImage" src={client5} alt="img5" />
+          <img className="movingImage" src={client7} alt="img4" />
+          <img className="movingImage" src={client8} alt="img5" />
+        </div>
+      </div>
+
+    
     <div>
-      <marquee className="he" direction="right" ><img src={downloadImage}></img>
-      </marquee>
       <h1 style={{fontSize: 70, marginBottom: 100, marginTop: 100, marginLeft: 900, color: 'darkviolet'}}>Top Products</h1>
     </div>
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
