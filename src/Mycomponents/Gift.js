@@ -21,7 +21,7 @@ export default function Gift() {
                     <h2 className="pb-2 pb-sm-3">Add premium support and lifetime updates to this.</h2>
                     <a 
                         className="btn btn-lg btn-primary animate-slide-end" 
-                        href="https://themes.getbootstrap.com/product/cartzilla-bootstrap-e-commerce-template-ui-kit/" 
+                        href="" 
                         target="_blank" 
                         rel="noreferrer"
                     >

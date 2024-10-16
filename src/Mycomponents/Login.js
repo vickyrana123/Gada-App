@@ -18,6 +18,7 @@ function Login() {
       const response = await axios.post(`http://localhost:5000/${endpoint}`, { email, password });
       localStorage.setItem('token', response.data.token);
       alert('Login successful');
+      navigate('/dashboard'); // Navigate to a protected route (dashboard)
     } catch (error) {
       setError(`Error during login: ${error.response ? error.response.data : error.message}`);
     }
@@ -32,7 +33,7 @@ function Login() {
               <h3 className="card-title text-center">Login</h3>
               <form onSubmit={handleSubmit}>
                 <div className="form-group mb-3">
-                  <label className='l1' htmlFor="email">Email</label>
+                  <label className="l1" htmlFor="email">Email</label>
                   <input
                     type="email"
                     className="form-control"
@@ -43,7 +44,7 @@ function Login() {
                   />
                 </div>
                 <div className="form-group mb-3">
-                  <label className='l1' htmlFor="password">Password</label>
+                  <label className="l1" htmlFor="password">Password</label>
                   <input
                     type="password"
                     className="form-control"

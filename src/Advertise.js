@@ -10,7 +10,7 @@ export default function Advertise(params) {
 									Loved by
 									<span class="text-primary"> 800+ </span>
 									a growing global
-									<span class="text-primary"> developers </span>
+									<span class="text-primary"> Clients </span>
 									community.
 								</h2>
 							</div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import downloadImage from './rough.png'; // Adjust path according to the actual file location
 
 export default function Main() {
   const navigate = useNavigate();
@@ -146,7 +147,23 @@ export default function Main() {
   };
 
   return (
-    
+    <>
+    <div style={{ display: 'flex', alignItems: 'center', padding: '20px' }}>
+      <img 
+        src={downloadImage} 
+        alt="Description of the image" 
+        style={{ width: '500', height: '500', marginRight: '100px', marginBottom: 100, marginTop: 100 }} // Image on the left
+      />
+      <div style={{ flex: 1}}> {/* This allows the text div to take up remaining space */}
+        <h1 style={{fontSize: 100, color: 'darkviolet'}}>Shop Smart, Live Well!</h1>
+        <p style={{fontSize: 50}}>Discover a world of unbeatable deals and quality products tailored for your lifestyle.</p>
+      </div>
+    </div>
+    <div>
+      <marquee className="he" direction="right" ><img src={downloadImage}></img>
+      </marquee>
+      <h1 style={{fontSize: 70, marginBottom: 100, marginTop: 100, marginLeft: 900, color: 'darkviolet'}}>Top Products</h1>
+    </div>
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
       {cardContent.map((card, index) => (
         <div className="col" key={index}>
@@ -189,5 +206,6 @@ export default function Main() {
         </div>
       ))}
     </div>
+    </>
   );
 }
