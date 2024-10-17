@@ -160,8 +160,103 @@ export default function Main() {
     navigate(`/buy-now/${index}`);
   };
 
+  const cardContent1 = [
+    {
+      text: (
+        <center>
+          <h1>MRP. <s>80,000</s>&nbsp;70,000</h1>
+          <h2>20% OFF</h2>
+        </center>
+      ),
+      img: "https://sharptronics.in/cdn/shop/products/61KhrVzqVyL._SL1500.jpg?v=1624967185"
+    },
+    {
+      text: (
+        <center>
+          <h1>MRP. <s>1,00,000</s>&nbsp;80,000</h1>
+          <h2>25% OFF</h2>
+        </center>
+      ),
+      img: "https://images.jdmagicbox.com/quickquotes/images_main/vu-55-oa-premium-android-4k-tv-147541426-clrn9.png"
+    },
+    {
+      text: (
+        <center>
+          <h1>MRP. <s>25000</s>&nbsp;20,000</h1>
+          <h2>20% OFF</h2>
+        </center>
+      ),
+      img: "https://img.etimg.com/thumb/msid-112716743,width-300,height-225,imgsize-8482,resizemode-75/best-premium-headphones-in-india-for-outstanding-sound-quality.jpg"
+    },
+    {
+      text: (
+        <center>
+          <h1>MRP. <s>15,000</s>&nbsp;10,000</h1>
+          <h2>30% OFF</h2>
+        </center>
+      ),
+      img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airpods-max-select-202409-blue_FV1?wid=976&hei=916&fmt=jpeg&qlt=90&.v=1724927052173"
+    },
+    {
+      text: (
+        <center>
+          <h1>MRP. <s>30,000</s>&nbsp;25,000</h1>
+          <h2>20% OFF</h2>
+        </center>
+      ),
+      img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQTP3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1687660671182"
+    },
+    {
+      text: (
+        <center>
+          <h1>MRP. <s>1,50,000</s>&nbsp;1,40,000</h1>
+          <h2>10% OFF</h2>
+        </center>
+      ),
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRopvKBaoe-GrLJI-y2F1I0JM1UFTAAIMn0Lg&s"
+    },
+    {
+      text: (
+        <center>
+          <h1>MRP. <s>80,000</s>&nbsp;75,000</h1>
+          <h2>20% OFF</h2>
+        </center>
+      ),
+      img: "https://images.samsung.com/is/image/samsung/p6pim/in/rs78cg8543b1hl/gallery/in-side-by-side-smart-conversion-449598-rs78cg8543b1hl-thumb-535107867?$344_344_PNG$"
+    },
+    {
+      text: (
+        <center>
+          <h1>MRP. <s>70,000</s>&nbsp;60,000</h1>
+          <h2>20% OFF</h2>
+        </center>
+      ),
+      img: "https://primus-ks.com/en/foto/images/premium/sliders/08_PREMIUM_Product_Sliders.jpg"
+    },
+    {
+      text: (
+        <center>
+          <h1>MRP. <s>60,000</s>&nbsp;58,000</h1>
+          <h2>20% OFF</h2>
+        </center>
+      ),
+      img: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1712991725/Croma%20Assets/Large%20Appliances/Air%20Conditioner/Images/306162_okwjms.png?tr=w-640"
+    },
+    {
+      text: (
+        <center>
+          <h1>MRP. <s>50,000</s>&nbsp;45,000</h1>
+          <h2>10% OFF</h2>
+        </center>
+      ),
+      img: "https://tiimg.tistatic.com/fp/1/008/188/blue-star-inverter-split-ac-capacity-1-5-ton-659.jpg"
+    }
+    
+  ];
+
   return (
     <>
+    
     <div style={{ display: 'flex', alignItems: 'center', padding: '20px' }}>
       <img 
         src={downloadImage} 
@@ -216,6 +311,52 @@ export default function Main() {
     </div>
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
       {cardContent.map((card, index) => (
+        <div className="col" key={index}>
+          <div className="card shadow-sm" style={{ height: '100%' }}>
+            <img
+              className="bd-placeholder-img card-img-top"
+              style={{
+                width: '100%',
+                height: '225px', // Consistent height for all images
+                objectFit: 'contain', // Ensures the entire image is visible
+                backgroundColor: '#f8f9fa', // Background color to fill the space
+                padding: '10px' // Optional padding to ensure better fit
+              }}
+              src={card.img}
+              alt={`Discounted product ${index + 1}`} // Modified alt attribute
+            />
+            <div className="card-body" style={{ height: '100%' }}>
+              <p className="card-text">{card.text}</p>
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="btn-group">
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-outline-secondary"
+                    style={{ marginRight: '20px' }} // Adds space between the buttons
+                  >
+                    Add To Cart
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-outline-secondary"
+                    style={{ marginLeft: '30px' }} 
+                    onClick={() => handleBuyNow(index)}
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div>
+      <h1 style={{fontSize: 70, marginBottom: 100, marginTop: 100, marginLeft: 900, color: 'darkviolet'}}>Premium Products</h1>
+    </div>
+    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+      {cardContent1.map((card, index) => (
         <div className="col" key={index}>
           <div className="card shadow-sm" style={{ height: '100%' }}>
             <img
