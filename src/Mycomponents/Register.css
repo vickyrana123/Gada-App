@@ -18,6 +18,8 @@ html, body {
     padding-right: 30px; /* Increased padding */
     max-width: 800px; /* Maximum width for the form container */
     margin: 0 auto; /* Center the container */
+    box-shadow: 20;
+    color: aliceblue;
   }
   
   .card {

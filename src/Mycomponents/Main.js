@@ -257,28 +257,50 @@ export default function Main() {
   return (
     <>
     
-    <div style={{ display: 'flex', alignItems: 'center', padding: '20px' }}>
-      <img 
-        src={downloadImage} 
-        alt="Description of the image" 
-        style={{height: 800,marginRight: '100px', marginBottom: 50, marginTop: 100, marginLeft: 100 }} // Image on the left
-      />
-      <div style={{ flex: 1}}> {/* This allows the text div to take up remaining space */}
-        <h1 style={{fontSize: 80, color: 'darkviolet'}}>Shop Smart, Live Well!</h1>
-        <p style={{fontSize: 50}}>Discover a world of unbeatable deals and quality products tailored for your lifestyle.</p>
+    <div style={{ display: 'flex', alignItems: 'center', padding: '20px', flexWrap: 'wrap' }}>
+        <img
+          src={downloadImage}
+          alt="Description of the image"
+          style={{
+            height: 'auto',
+            width: '40%',
+            marginRight: '20px',
+            marginBottom: '50px',
+            marginTop: '100px',
+            marginLeft: '100px',
+          }}
+        />
+        <div style={{ flex: 1, textAlign: 'left' }}>
+          <h1 style={{ fontSize: '3em', color: 'darkviolet' }}>Shop Smart, Live Well!</h1>
+          <p style={{ fontSize: '2em' }}>
+            Discover a world of unbeatable deals and quality products tailored for your lifestyle.
+          </p>
+        </div>
       </div>
-    </div>
-    <div style={{ display: 'flex', alignItems: 'center', padding: '20px' }}>
-    <div style={{ flex: 1}}> {/* This allows the text div to take up remaining space */}
-        <h1 style={{fontSize: 70, color: 'darkviolet', marginLeft: 80}}>Quality Products at Unbeatable Prices!</h1>
-        <p style={{fontSize: 50, marginLeft: 80}}>Discover a curated selection of high-quality products that cater to your needs at prices you won’t find anywhere else</p>
+
+      {/* Second Section */}
+      <div style={{ display: 'flex', alignItems: 'center', padding: '20px', flexWrap: 'wrap' }}>
+        <div style={{ flex: 1, textAlign: 'left' }}>
+          <h1 style={{ fontSize: '3em', color: 'darkviolet', marginLeft: '80px' }}>
+            Quality Products at Unbeatable Prices!
+          </h1>
+          <p style={{ fontSize: '2em', marginLeft: '80px' }}>
+            Discover a curated selection of high-quality products that cater to your needs at prices you won’t find anywhere else.
+          </p>
+        </div>
+        <img
+          src={Image}
+          alt="Description of the image"
+          style={{
+            height: 'auto',
+            width: '40%',
+            marginRight: '20px',
+            marginBottom: '50px',
+            marginTop: '100px',
+            marginLeft: '80px',
+          }}
+        />
       </div>
-      <img 
-        src={Image} 
-        alt="Description of the image" 
-        style={{height: 600,marginRight: '100px', marginBottom: 100, marginTop: 100, marginLeft: 80 }} // Image on the left
-      />
-    </div>
     <div className="slider-container" style={{marginTop: 200, marginBottom: 200}}>
       <h1 style={{fontSize: 70, marginBottom: 180, marginLeft: 900, color: 'darkviolet'}}>Our Partners</h1>
         <div className="image-slider">
@@ -397,6 +419,10 @@ export default function Main() {
         </div>
       ))}
     </div>
+
+    
+
+    
     </>
   );
 }

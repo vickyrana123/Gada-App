@@ -5,6 +5,7 @@ function Register() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
+  
   const [password, setPassword] = useState('');
   const [mobile, setMobile] = useState('');
   const [gender, setGender] = useState('');
@@ -40,9 +41,9 @@ function Register() {
         <div className="col-md-6">
           <div className="card">
             <div className="card-body">
-              <h3 className="card-title text-center">Register</h3>
+              <h3 className="card-title text-center" style={{color: "blue"}}>Register</h3>
               <form onSubmit={handleSubmit}>
-                <div className="form-group mb-3">
+                <div className="form-group mb-3" style={{marginLeft:"50px", marginRight: "50px"}}>
                   <label className='l1' htmlFor="firstName">First Name</label>
                   <input
                     type="text"
@@ -53,7 +54,7 @@ function Register() {
                     required
                   />
                 </div>
-                <div className="form-group mb-3">
+                <div className="form-group mb-3" style={{marginLeft:"50px", marginRight: "50px"}}>
                   <label  className='l1' htmlFor="lastName">Last Name</label>
                   <input
                     type="text"
@@ -64,7 +65,7 @@ function Register() {
                     required
                   />
                 </div>
-                <div className="form-group mb-3">
+                <div className="form-group mb-3" style={{marginLeft:"50px", marginRight: "50px"}}>
                   <label  className='l1' htmlFor="email">Email</label>
                   <input
                     type="email"
@@ -75,7 +76,7 @@ function Register() {
                     required
                   />
                 </div>
-                <div className="form-group mb-3">
+                <div className="form-group mb-3" style={{marginLeft:"50px", marginRight: "50px"}}>
                   <label  className='l1' htmlFor="password">Password</label>
                   <input
                     type="password"
@@ -86,7 +87,7 @@ function Register() {
                     required
                   />
                 </div>
-                <div className="form-group mb-3">
+                <div className="form-group mb-3" style={{marginLeft:"50px", marginRight: "50px"}}>
                   <label  className='l1' htmlFor="mobile">Mobile</label>
                   <input
                     type="text"
@@ -97,7 +98,7 @@ function Register() {
                     required
                   />
                 </div>
-                <div className="form-group mb-3">
+                <div className="form-group mb-3" style={{marginLeft:"50px", marginRight: "50px"}}>
                   <label  className='l1' htmlFor="gender">Gender</label>
                   <select
                     id="gender"
@@ -112,7 +113,7 @@ function Register() {
                     <option className='o1' value="other">Other</option>
                   </select>
                 </div>
-                <button type="submit" className="btn btn-primary w-100">
+                <button type="submit" className="btn btn-primary" style={{marginLeft: "160px", paddingLeft: "70px", paddingRight: "70px"}}>
                   Register
                 </button>
               </form>
